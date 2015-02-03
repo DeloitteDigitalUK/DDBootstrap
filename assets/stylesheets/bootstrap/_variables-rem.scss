@@ -1,0 +1,155 @@
+/* ========================================================================== *
+ *                              REM calculation
+ * ========================================================================== */
+
+@function strip-units($number) {// From : http://stackoverflow.com/a/12335841/1339426
+	@return $number / ($number * 0 + 1);
+}
+
+/**
+* Use em or rem font-size in Bootstrap 3
+* Based on Less version here: https://gist.github.com/jasny/9731895
+* Values pulled from _variables.scss
+*/
+$font-size-root: $font-size-base;
+$font-unit: 1rem; // Pick em or rem here
+
+@function pixels-to-rem($pixels) {
+	@return $pixels / $font-size-root * $font-unit;
+}
+
+// Convert all variables to rem
+
+$font-size-base: 1 * $font-unit;
+$font-size-large: pixels-to-rem($font-size-large);
+$font-size-small: pixels-to-rem($font-size-small);
+
+$font-size-h1: pixels-to-rem($font-size-h1);
+$font-size-h2: pixels-to-rem($font-size-h2);
+$font-size-h3: pixels-to-rem($font-size-h3);
+$font-size-h4: pixels-to-rem($font-size-h4);
+$font-size-h5: pixels-to-rem($font-size-h5);
+$font-size-h6: pixels-to-rem($font-size-h6);
+
+$line-height-computed: ($font-size-base * $line-height-base);
+
+$padding-base-vertical: pixels-to-rem($padding-base-vertical);
+$padding-base-horizontal: pixels-to-rem($padding-base-horizontal);
+
+$padding-large-vertical: pixels-to-rem($padding-large-vertical);
+$padding-large-horizontal: pixels-to-rem($padding-large-horizontal);
+
+$padding-small-vertical: pixels-to-rem($padding-small-vertical);
+$padding-small-horizontal: pixels-to-rem($padding-small-horizontal);
+
+$padding-xs-vertical: pixels-to-rem($padding-xs-vertical);
+$padding-xs-horizontal: pixels-to-rem($padding-xs-horizontal);
+
+$border-radius-base: pixels-to-rem($border-radius-base);
+$border-radius-large: pixels-to-rem($border-radius-large);
+$border-radius-small: pixels-to-rem($border-radius-small);
+
+$caret-width-base: pixels-to-rem($caret-width-base);
+$caret-width-large: pixels-to-rem($caret-width-large);
+
+$table-cell-padding: pixels-to-rem($table-cell-padding);
+$table-condensed-cell-padding: pixels-to-rem($table-condensed-cell-padding);
+
+//** Default `.form-control` height
+$input-height-base: ($line-height-computed + ($padding-base-vertical * 2));
+//** Large `.form-control` height
+$input-height-large: (($font-size-large * $line-height-large) + ($padding-large-vertical * 2));
+//** Small `.form-control` height
+$input-height-small: (($font-size-small * $line-height-small) + ($padding-small-vertical * 2));
+
+//== Media queries breakpoints
+
+// Extra small screen / phone
+$screen-xs: ($screen-xs / $font-size-root) * 1em;
+$screen-xs-min: $screen-xs;
+$screen-phone: $screen-xs-min;
+
+// Small screen / tablet
+$screen-sm: ($screen-sm / $font-size-root) * 1em;
+$screen-sm-min: $screen-sm;
+$screen-tablet: $screen-sm-min; 
+
+// Medium screen / desktop
+$screen-md: ($screen-md / $font-size-root) * 1em;
+$screen-md-min: $screen-md;
+$screen-desktop: $screen-md-min;
+
+// Large screen / wide desktop
+$screen-lg: ($screen-lg / $font-size-root) * 1em;
+$screen-lg-min: $screen-lg;
+$screen-lg-desktop: $screen-lg-min;
+
+//== Container sizes
+// Small screen / tablet
+$container-tablet: pixels-to-rem($container-tablet);
+//** For `$screen-sm-min` and up.
+$container-sm: $container-tablet;
+
+// Medium screen / desktop
+$container-desktop: pixels-to-rem($container-desktop);
+//** For `$screen-md-min` and up.
+$container-md: $container-desktop;
+
+// Large screen / wide desktop
+$container-large-desktop: pixels-to-rem($container-large-desktop);
+//** For `$screen-lg-min` and up.
+$container-lg: $container-large-desktop;
+
+
+// Set root font size
+
+html {
+	font-size: $font-size-root;
+}
+
+
+// Change styling for elements that mix pixels and ems
+
+pre {
+	font-size: ( $font-size-base - ($font-unit / strip-units($font-size-root)));
+}
+
+.form-control-feedback {
+	width: calc($input-height-base + 2px);
+	height: calc($input-height-base + 2px);
+}
+.input-lg + .form-control-feedback {
+	width: calc($input-height-large + 2px);
+	height: calc($input-height-large + 2px);
+}
+.input-sm + .form-control-feedback {
+	width: calc($input-height-small + 2px);
+	height: calc($input-height-small + 2px);
+}
+
+.form-control {
+	height: calc($input-height-base + 2px);
+}
+
+.form-horizontal {
+	.radio, .checkbox, .radio-inline, .checkbox-inline {
+		padding: $padding-base-vertical;
+		border: 1px solid transparent;
+	}
+	.radio, .checkbox {
+		min-height: calc(($line-height-computed + $padding-base-vertical) + 1px);
+	}
+	.form-control-static {
+		padding-top: $padding-base-vertical;
+		border-top: 1px solid transparent;
+		padding-bottom: $padding-base-vertical;
+		border-bottom: 1px solid transparent;
+	}
+
+	@media (min-width: #{$screen-sm-min}) {
+		.control-label {
+			padding-top: $padding-base-vertical;
+			border-top: 1px solid transparent;
+		}
+	}
+}
