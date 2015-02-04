@@ -1,17 +1,18 @@
-DDBootstrap
+Digital Bootstrap
 ===========
 
 [Deloitte Digital](http://www.deloittedigital.com/eu) version of [Twitter Bootstrap](http://getbootstrap.com/) (on steroids)
 
 ###What is it?
-DDBootstrap has been built on top of **bootstrap-sass** and features rem sizing and **no** dependencies on Ruby Sass gem.
+DDBootstrap has been built on top of **bootstrap-sass** and features
+* sass version with **no** dependencies on Ruby Sass gem
+* rem sizing
+* Deloitte colour palette
 
 ###Installation
 
-
 Please see the appropriate guide for your environment of choice:
 
-* [Bower](#a-bower).
 
 ### a. Bower
 
