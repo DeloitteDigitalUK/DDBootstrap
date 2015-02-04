@@ -1,14 +1,8 @@
 {
-  "name": "bootstrap-sass",
-  "version": "3.3.3",
-  "homepage": "https://github.com/twbs/bootstrap-sass",
-  "authors": [
-    "Thomas McDonald",
-    "Tristan Harward",
-    "Peter Gumeson",
-    "Gleb Mazovetskiy"
-  ],
-  "description": "bootstrap-sass is a Sass-powered version of Bootstrap, ready to drop right into your Sass powered applications.",
+  "name": "dd-bootstrap",
+  "version": "0.1.1",
+  "homepage": "https://github.com/DeloitteDigitalUK/DDBootstrap",
+  "description": "based on bootstrap-sass 3.3.3 — a Sass-powered version of Bootstrap, ready to drop right into your DD applications.",
   "main": [
     "assets/stylesheets/_bootstrap.scss",
     "assets/fonts/bootstrap/glyphicons-halflings-regular.eot",
@@ -21,7 +15,8 @@
   "keywords": [
     "twbs",
     "bootstrap",
-    "sass"
+    "sass",
+    "deloitte digital"
   ],
   "license": "MIT",
   "ignore": [
