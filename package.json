@@ -1,7 +1,7 @@
 {
-  "name": "bootstrap-sass",
-  "version": "3.3.3",
-  "description": "bootstrap-sass is a Sass-powered version of Bootstrap, ready to drop right into your Sass powered applications.",
+  "name": "dd-bootstrap",
+  "version": "0.1.1",
+  "description": "based on bootstrap-sass 3.3.3 — a Sass-powered version of Bootstrap, ready to drop right into your DD applications.",
   "main": "assets/javascripts/bootstrap.js",
   "repository": {
     "type": "git",
@@ -10,7 +10,8 @@
   "keywords": [
     "bootstrap",
     "sass",
-    "css"
+    "css",
+    "deloitte digital"
   ],
   "contributors": [
   ],
