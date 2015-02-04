@@ -4,24 +4,32 @@ DDBootstrap
 [Deloitte Digital](http://www.deloittedigital.com/eu) version of [Twitter Bootstrap](http://getbootstrap.com/) (on steroids)
 
 ###What is it?
-DDBootstrap has been built on top of Twitter Bootstrap
+DDBootstrap has been built on top of **bootstrap-sass** and features rem sizing and **no** dependencies on Ruby Sass gem.
 
-###How to use it
-On the command line:
+###Installation
+
+
+Please see the appropriate guide for your environment of choice:
+
+* [Bower](#a-bower).
+
+### a. Bower
+
+dd-bootstrap Bower package is compatible with node-sass 1.2.3+. You can install it with:
+
+```console
+$ bower install dd-bootstrap --save
 ```
+
+Sass, JS, and all other assets are located at [assets](/assets).
+
+By default, `bower.json` main field list only the main `_bootstrap.scss` and all the static assets (fonts and JS).
+This is compatible by default with asset managers such as [wiredep](https://github.com/taptapship/wiredep).
+
+### b. Clone
+
+```console
 $ git clone https://github.com/DeloitteDigitalUK/DDBootstrap
-```
-```
-$ cd DDBootstrap
-```
-```
-$ npm install
-```
-```
-$ bower install
-```
-````
-$ grunt serve
 ```
 
 ###Features
