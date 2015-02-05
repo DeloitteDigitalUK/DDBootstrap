@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2
+
+* Deloitte colour palette variables added
+
 ## 0.1.1
 
 * Forked version of Sass-bootstrap **v3.3.3***
