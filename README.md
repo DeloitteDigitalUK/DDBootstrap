@@ -33,6 +33,30 @@ This is compatible by default with asset managers such as [wiredep](https://gith
 $ git clone https://github.com/DeloitteDigitalUK/DDBootstrap
 ```
 
+
+###Configuration
+
+You can either import all of bootstrap into your assets:
+
+```console
+@import "bootstrap"
+```
+
+or import individual components explicitly:
+
+```console
+@import "bootstrap/breadcrumbs";
+@import "bootstrap/pagination";
+```
+
+In the scenario where you would like to override bootstrap's variables with your own variables, use the following:
+
+```console
+@import "bootstrap-variables";
+@import "my-variables";
+@import "bootstrap-sans-variables";
+```
+
 ###Features
 **Deloitte Digital colour palette introduced**  
 ![](https://dl.dropboxusercontent.com/u/79955713/DD/Screen%20Shot%202015-02-04%20at%2010.22.30.png)   
