@@ -1,9 +1,12 @@
 # Changelog
 
+## 0.1.3
+
+* Deloitte fonts removed
+
 ## 0.1.2
 
 * Deloitte colour palette variables added
-* Deloitte fonts removed
 
 ## 0.1.1
 
