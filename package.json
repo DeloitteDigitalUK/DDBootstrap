@@ -1,6 +1,6 @@
 {
   "name": "dd-bootstrap",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "based on bootstrap-sass 3.3.3 — a Sass-powered version of Bootstrap, ready to drop right into your DD applications.",
   "main": "assets/javascripts/bootstrap.js",
   "repository": {
